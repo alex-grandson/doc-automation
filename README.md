@@ -1,9 +1,9 @@
 # YADRO tryout
 
 Docs status:
-<br>
-    <img src="https://github.com/alex-grandson/doc-automation/actions/workflows/Documentation/badge.svg" />
-<br>
+![Status](https://github.com/alex-grandson/doc-automation/actions/workflows/sphinx-docs.yml/badge.svg)
+
+Docs page: [github.io](https://alex-grandson.github.io/doc-automation/)
 
 This is sample CI/CD project as yadro tryout task
 
