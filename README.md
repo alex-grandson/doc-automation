@@ -1,5 +1,10 @@
 # YADRO tryout
 
+Docs status:
+<br>
+    <img src="https://github.com/alex-grandson/doc-automation/actions/workflows/Documentation/badge.svg" />
+<br>
+
 This is sample CI/CD project as yadro tryout task
 
 ## Requirements
