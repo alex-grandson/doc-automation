@@ -3,8 +3,13 @@
 .idea/
 
 **/__pycache__/
+.pytest_cache/
 **/.pyc
 
 poetry.lock
 
 **/.DS_Store
+
+docs/build/*
+docs/build/html/*
+!docs/build/html/.nojekyll

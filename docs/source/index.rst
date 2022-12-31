@@ -6,6 +6,10 @@
 Welcome to Yadro Tryout's documentation!
 ========================================
 
+|ProjectVersion|
+
+|Repo|
+
 .. mdinclude:: ../../README.md
 
 About candidate

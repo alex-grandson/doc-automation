@@ -9,14 +9,18 @@ services:
       target: app
     ports:
       - "5123:5000"
+    entrypoint: [ "flask", "run", "--host=0.0.0.0" ]
 
   docs:
     build:
       context: .
       dockerfile: Dockerfile
       target: docs
+      args:
+        - RELEASE_VERSION=${RELEASE_VERSION-0.1.0}
+        - REPO_URL=${REPO_URL}
     volumes:
-      - ./docs:/src/docs:rw
+      - ./docs/build:/src/docs/build
 
   nginx:
     image: nginx:1.23.3-alpine
