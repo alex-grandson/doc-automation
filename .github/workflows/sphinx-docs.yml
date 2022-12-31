@@ -1,0 +1,35 @@
+name: Documentation [Build and deploy]
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  generate_docs:
+    runs-on: ubuntu-22.04
+    env:
+      RELEASE_VERSION: "1.0.0"
+      REPO_URL: https://github.com/${{ github.repository }}
+    steps:
+
+      - name: Prepare docs
+        run: |
+          echo "Docs version is $RELEASE_VERSION"
+          echo "RELEASE_VERSION is $RELEASE_VERSION"
+          echo "REPO_URL is $REPO_URL"
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Building docs from source
+        run: docker compose up --build docs
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs/build/html
+          branch: gh-pages
